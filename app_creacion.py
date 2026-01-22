@@ -19,8 +19,13 @@ def crear_archivo_power():
     nombre = pedir_nombre
     open(f"{nombre}.pptx", "x")
 
+def crear_archivo_base_datos():
+    pedir_nombre = input("ingrese el nombre del archivo que desea crear:")
+    nombre = pedir_nombre
+    open(f"{nombre}.sql", "x")
 
-opcion_usuario = int(input("ingrese la opcion que desea hacer 1 para crear txt | 2 para crear un word  | 3 para crear powerpoint : "))
+
+opcion_usuario = int(input("ingrese la opcion que desea hacer 1 para crear txt | 2 para crear un word  | 3 para crear powerpoint ºº , 4 para crear una base de datos: "))
 
 def app():
     if opcion_usuario == 1:
@@ -29,6 +34,8 @@ def app():
         crear_archivo_py()
     elif opcion_usuario == 3:
         crear_archivo_power()
+    elif opcion_usuario == 4:
+        crear_archivo_base_datos()
     else:
         print("no se crea el archivo")
 
